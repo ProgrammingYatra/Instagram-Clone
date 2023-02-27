@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Instagram-Clone using MongoDB Express React Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgrammingYatra/Instagram-Clone.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express",
+    "React",
+    "Node.js"
+  ],
+  "author": "Dev Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProgrammingYatra/Instagram-Clone/issues"
+  },
+  "homepage": "https://github.com/ProgrammingYatra/Instagram-Clone#readme"
+}
