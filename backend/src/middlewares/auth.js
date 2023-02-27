@@ -1,29 +1,17 @@
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncError = require("./catchAsyncError");
 const jwt = require("jsonwebtoken");
-const userModel = require("../models/userModel");
+const User=require("../models/User")
 
-exports.isAuthenticate = catchAsyncError(async (req, res, next) => {
+exports.isAuthenticated = catchAsyncError(async (req, res, next) => {
   const { token } = req.cookies;
   if (!token) {
-    return next(new ErrorHandler("Please Login to Access data", 401));
+    return next(new ErrorHandler("Please Login First", 400));
   }
-  const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-  req.user = await userModel.findById(decodedToken.id);
+
+  const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+  req.user = await User.findById(decoded._id);
+
   next();
 });
-
-exports.authorizeRoles = (...roles) => {
-  return (req, res, next) => {
-    if (!roles.includes(req.user.role)) {
-      return next(
-        new ErrorHandler(
-          `Role: ${req.user.role} is not allowed to access this resouce `,
-          403
-        )
-      );
-    }
-
-    next();
-  };
-};
