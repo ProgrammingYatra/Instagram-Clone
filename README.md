@@ -1,1 +1,1 @@
-# Instagram-Clone using MongoDB Express React Node.js 
+# SOCIAL-MEDIA-APP using MongoDB Express React Node.js 
