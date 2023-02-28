@@ -6,6 +6,7 @@ const cookie=require("cookie-parser")
 const app = express();
 
 const User = require("./routes/user");
+const Post = require("./routes/post");
 
 app.use(express.json());
 app.use(cors());
@@ -14,6 +15,7 @@ app.use(cookie())
 
 
 app.use("/api/", User);
+app.use("/api/", Post);
 
 //Error Handler middleware
 app.use(ErrorHandler);
