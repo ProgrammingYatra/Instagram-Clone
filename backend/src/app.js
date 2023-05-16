@@ -14,8 +14,8 @@ app.use(multer().any());
 app.use(cookie())
 
 
-app.use("/api", User);
-app.use("/api", Post);
+app.use("/api/v1", User);
+app.use("/api/v1", Post);
 
 //Error Handler middleware
 app.use(ErrorHandler);

@@ -69,12 +69,13 @@ exports.likeAndDislike = catchAsyncError(async (req, res, next) => {
 
 exports.getPostOfFollowing = catchAsyncError(async (req, res, next) => {
   const user = await User.findById(req.user._id);
+  console.log(user);
   const posts = await Post.find({
     owner: {
       $in: user.following,
     },
-  });
-
+  }).populate("owner likes comments.user");
+  console.log(posts);
   res.status(200).json({
     success: true,
     posts: posts.reverse(),

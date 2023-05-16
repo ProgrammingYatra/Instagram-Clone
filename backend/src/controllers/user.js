@@ -245,11 +245,11 @@ exports.getUserProfile = catchAsyncError(async (req, res, next) => {
 
 //get All user
 exports.getAllUsers = catchAsyncError(async (req, res, next) => {
-  const user = await User.find({});
+  const users = await User.find({});
 
   return res.status(200).json({
     success: true,
-    user,
+    users,
   });
 });
 
