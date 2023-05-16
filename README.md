@@ -9,22 +9,36 @@
 ## env variable
 
 ### MONGO_URI="-----"
-PORT=4000
-JWT_SECRET="Hithere"
-JWT_EXPIRE=5d
-COOKIE_EXPIRE=5
+
+1. PORT=4000
+
+2. JWT_SECRET="Hithere"
+
+3. JWT_EXPIRE=5d
+
+4. COOKIE_EXPIRE=5
+
 
 ### Email
-SMPT_HOST="smtp.gmail.com"
-SMPT_PORT=465
-SMPT_SERVICE="Gmail"
-SMPT_MAIL="-----"
-SMPT_PASSWORD="----"
+
+1. SMPT_HOST="smtp.gmail.com"
+
+2. SMPT_PORT=465
+
+3. SMPT_SERVICE="Gmail"
+
+4. SMPT_MAIL="-----"
+
+5. SMPT_PASSWORD="----"
+
 
 ### AWS
-KEY="-"
-AWS_SECRET_KEY="----"
-REGION="----"
+
+1. KEY="-"
+
+2. AWS_SECRET_KEY="----"
+
+3. REGION="----"
 
 
 ## frontend
@@ -33,5 +47,5 @@ REGION="----"
 3. npm start
 
 
-### Tech Blog Visit Here :-
-##### www.programmingyatra.in
+# Tech Blog Visit Here :-
+## www.programmingyatra.in
